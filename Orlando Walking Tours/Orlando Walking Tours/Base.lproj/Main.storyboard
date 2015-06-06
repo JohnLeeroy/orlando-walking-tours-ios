@@ -174,17 +174,15 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="117"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HYG-ho-mKG">
-                                    <rect key="frame" x="239" y="30" width="123" height="29"/>
-                                    <segments>
-                                        <segment title="List"/>
-                                        <segment title="Map"/>
-                                    </segments>
-                                </segmentedControl>
-                                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHX-dY-k4n">
-                                    <rect key="frame" x="0.0" y="73" width="600" height="44"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxr-Or-84H">
+                                    <rect key="frame" x="277" y="59" width="31" height="30"/>
+                                    <state key="normal" title="Map">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="K4d-UP-jiM" kind="show" id="0cG-l9-8Og"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -250,6 +248,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aS8-nF-8XH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2104" y="344"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="jfX-P3-Spg">
+            <objects>
+                <viewController id="K4d-UP-jiM" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Nu-aV-lIo"/>
+                        <viewControllerLayoutGuide type="bottom" id="LOx-5d-3FA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XOA-iQ-AF5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z4h-qv-yAs">
+                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="minMap" destination="z4h-qv-yAs" id="cvg-2a-159"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGT-0H-Iqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2104" y="1108"/>
         </scene>
         <!--Location Detail View Controller-->
         <scene sceneID="q71-6M-Raf">

@@ -10,6 +10,7 @@
 #import "LocationDetailViewController.h"
 #import "HistoricLocation.h"
 #import "LocationTableViewCell.h"
+#import "MapViewController.h"
 
 @interface LocationListTableViewController ()
 
@@ -95,6 +96,8 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    
+    
     if ([[segue identifier] isEqualToString:@"LocationDetailSegue"])
     {
         // Get reference to the destination view controller
@@ -103,6 +106,15 @@
         // Pass any objects to the view controller here, like...
         vc.historicLocation = self.selectedHistoricLocation;
         vc.delegate = self;
+    }
+    else if([[segue identifier] isEqualToString:@"MapViewSegue"])
+    {
+        MapViewController *vc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        vc.loadedArray = self.locationsArray;
+        vc.delegate = self;
+        
     }
 }
 
@@ -124,7 +136,6 @@
         [self.delegate locationListTableViewController:self didSelectHistoricLocation:location];
     }
 }
-
 
 /*
 // Override to support conditional editing of the table view.

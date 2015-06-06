@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88B667151B236AB800E046E5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B667141B236AB800E046E5 /* MapViewController.m */; };
+		88B667181B237B8100E046E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B667161B237B8100E046E5 /* Main.storyboard */; };
 		D71D6F831A7D6AE1006D0456 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D71D6F821A7D6AE1006D0456 /* main.m */; };
 		D71D6F861A7D6AE1006D0456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D71D6F851A7D6AE1006D0456 /* AppDelegate.m */; };
 		D71D6F891A7D6AE1006D0456 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71D6F881A7D6AE1006D0456 /* ViewController.m */; };
-		D71D6F8C1A7D6AE1006D0456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71D6F8A1A7D6AE1006D0456 /* Main.storyboard */; };
 		D71D6F8E1A7D6AE1006D0456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71D6F8D1A7D6AE1006D0456 /* Images.xcassets */; };
 		D71D6F911A7D6AE1006D0456 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71D6F8F1A7D6AE1006D0456 /* LaunchScreen.xib */; };
 		D71D6F9D1A7D6AE1006D0456 /* Orlando_Walking_ToursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71D6F9C1A7D6AE1006D0456 /* Orlando_Walking_ToursTests.m */; };
@@ -46,6 +47,9 @@
 /* Begin PBXFileReference section */
 		7C24C308243E028BC2F46390 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A25B6EAB3019B980F120A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		88B667131B236AB800E046E5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		88B667141B236AB800E046E5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		88B667171B237B8100E046E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../.Trash/orlando-walking-tours-ios/Orlando Walking Tours/Orlando Walking Tours/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D3332DE95C1757DA9D22E830 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D71D6F7D1A7D6AE1006D0456 /* Orlando Walking Tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Orlando Walking Tours.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71D6F811A7D6AE1006D0456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +58,6 @@
 		D71D6F851A7D6AE1006D0456 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D71D6F871A7D6AE1006D0456 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D71D6F881A7D6AE1006D0456 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D71D6F8B1A7D6AE1006D0456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D71D6F8D1A7D6AE1006D0456 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D71D6F901A7D6AE1006D0456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D71D6F961A7D6AE1006D0456 /* Orlando Walking ToursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Orlando Walking ToursTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,9 +242,9 @@
 		D75DDA601A807B8C00988B18 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88B667161B237B8100E046E5 /* Main.storyboard */,
 				D71D6FD21A7D7B77006D0456 /* WalkingTours.xcdatamodeld */,
 				D71D6F8F1A7D6AE1006D0456 /* LaunchScreen.xib */,
-				D71D6F8A1A7D6AE1006D0456 /* Main.storyboard */,
 				D71D6F8D1A7D6AE1006D0456 /* Images.xcassets */,
 			);
 			name = Resources;
@@ -259,6 +262,8 @@
 				D71D6F881A7D6AE1006D0456 /* ViewController.m */,
 				D75DDA681A8087A200988B18 /* TourDetailListViewController.h */,
 				D75DDA691A8087A200988B18 /* TourDetailListViewController.m */,
+				88B667131B236AB800E046E5 /* MapViewController.h */,
+				88B667141B236AB800E046E5 /* MapViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -372,7 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D71D6F8C1A7D6AE1006D0456 /* Main.storyboard in Resources */,
+				88B667181B237B8100E046E5 /* Main.storyboard in Resources */,
 				D71D6F911A7D6AE1006D0456 /* LaunchScreen.xib in Resources */,
 				D71D6F8E1A7D6AE1006D0456 /* Images.xcassets in Resources */,
 			);
@@ -440,6 +445,7 @@
 				D71D6F831A7D6AE1006D0456 /* main.m in Sources */,
 				D71D6FCA1A7D76FB006D0456 /* AddTourViewController.m in Sources */,
 				D71D6FE01A7D8097006D0456 /* LocationTableViewCell.m in Sources */,
+				88B667151B236AB800E046E5 /* MapViewController.m in Sources */,
 				D71D6FC71A7D72FA006D0456 /* TourTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,10 +469,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D71D6F8A1A7D6AE1006D0456 /* Main.storyboard */ = {
+		88B667161B237B8100E046E5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D71D6F8B1A7D6AE1006D0456 /* Base */,
+				88B667171B237B8100E046E5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
