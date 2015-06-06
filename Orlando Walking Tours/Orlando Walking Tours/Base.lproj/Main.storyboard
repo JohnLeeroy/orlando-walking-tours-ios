@@ -244,19 +244,10 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="searchDisplayController" destination="aFX-oy-1hc" id="J5O-ou-QXG"/>
                         <segue destination="fJa-x3-V6A" kind="show" identifier="LocationDetailSegue" id="lqs-Mh-a8P"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aS8-nF-8XH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="aFX-oy-1hc">
-                    <connections>
-                        <outlet property="delegate" destination="Dyq-mM-LCa" id="vFJ-CH-mCG"/>
-                        <outlet property="searchContentsController" destination="Dyq-mM-LCa" id="sfm-BZ-Mhb"/>
-                        <outlet property="searchResultsDataSource" destination="Dyq-mM-LCa" id="KN4-NA-O1w"/>
-                        <outlet property="searchResultsDelegate" destination="Dyq-mM-LCa" id="IqF-3A-U0C"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2104" y="344"/>
         </scene>
