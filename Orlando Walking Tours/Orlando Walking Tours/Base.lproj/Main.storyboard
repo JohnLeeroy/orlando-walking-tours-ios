@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zA5-oz-hcX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zA5-oz-hcX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -170,6 +170,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Jtc-cA-F64">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="117"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HYG-ho-mKG">
+                                    <rect key="frame" x="239" y="30" width="123" height="29"/>
+                                    <segments>
+                                        <segment title="List"/>
+                                        <segment title="Map"/>
+                                    </segments>
+                                </segmentedControl>
+                                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHX-dY-k4n">
+                                    <rect key="frame" x="0.0" y="73" width="600" height="44"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="44" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="57" id="63N-2i-GEs" customClass="LocationTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -226,10 +244,19 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="searchDisplayController" destination="aFX-oy-1hc" id="J5O-ou-QXG"/>
                         <segue destination="fJa-x3-V6A" kind="show" identifier="LocationDetailSegue" id="lqs-Mh-a8P"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aS8-nF-8XH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="aFX-oy-1hc">
+                    <connections>
+                        <outlet property="delegate" destination="Dyq-mM-LCa" id="vFJ-CH-mCG"/>
+                        <outlet property="searchContentsController" destination="Dyq-mM-LCa" id="sfm-BZ-Mhb"/>
+                        <outlet property="searchResultsDataSource" destination="Dyq-mM-LCa" id="KN4-NA-O1w"/>
+                        <outlet property="searchResultsDelegate" destination="Dyq-mM-LCa" id="IqF-3A-U0C"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2104" y="344"/>
         </scene>
@@ -405,7 +432,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="KUt-rH-B7e"/>
-        <segue reference="iHK-9O-4Gl"/>
+        <segue reference="lqs-Mh-a8P"/>
         <segue reference="jYb-oE-omK"/>
     </inferredMetricsTieBreakers>
 </document>
