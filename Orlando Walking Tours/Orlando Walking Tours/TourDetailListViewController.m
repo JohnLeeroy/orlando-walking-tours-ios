@@ -10,6 +10,7 @@
 #import "Tour.h"
 #import "HistoricLocation.h"
 #import "HistoricLocationTableViewCell.h"
+#import "NSArray+HistoricLocation.h"
 
 @interface TourDetailListViewController ()
 
@@ -75,7 +76,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HistoricLocationTableViewCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HistoricLocationTableViewCell" forIndexPath:indexPath];
     
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HistoricLocationTableViewCell"];
@@ -145,12 +146,15 @@
 
 #pragma mark - Custom Delegate Methods
 -(void)locationListTableViewController:(LocationListTableViewController *)controller didSelectHistoricLocation:(HistoricLocation *)location {
-
-    [self saveLocation:location];
+    
+    if(![self.locationsArray containsLocation:location])
+        [self saveLocation:location];
 }
 
 -(void)locationDetailViewController:(LocationDetailViewController *)controller didSelectHistoricLocation:(HistoricLocation *)location {
-    [self saveLocation:location];
+    
+    if(![self.locationsArray containsLocation:location])
+        [self saveLocation:location];
 }
 
 -(void)saveLocation:(HistoricLocation *)location {
